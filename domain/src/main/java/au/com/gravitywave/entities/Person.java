@@ -5,6 +5,14 @@ package au.com.gravitywave.entities;
  */
 
 public class Person extends EntityBase {
+
+    public Person(int personId, String firstName, String lastName, String address) {
+        this.personId = personId;
+        FirstName = firstName;
+        LastName = lastName;
+        Address = address;
+    }
+
     public int getPersonId() {
         return personId;
     }
