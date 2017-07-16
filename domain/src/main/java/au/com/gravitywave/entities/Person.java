@@ -6,12 +6,12 @@ package au.com.gravitywave.entities;
 
 public class Person extends EntityBase {
 
-    public Person(int personId, String firstName, String lastName, String address) {
-        this.personId = personId;
-        FirstName = firstName;
-        LastName = lastName;
-        Address = address;
-    }
+    private int personId;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String email;
+    private String passwordHash;
 
     public int getPersonId() {
         return personId;
@@ -22,32 +22,52 @@ public class Person extends EntityBase {
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
-    private int personId;
-    private String FirstName;
-    private String LastName;
+    public String getEmail() {
+        return email;
+    }
 
-    private String Address;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPasswordHash() {
+        return passwordHash;
+    }
+
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
+    }
+
+    public Person(int personId, String firstName, String lastName, String address, String email, String passwordHash) {
+        this.personId = personId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.email = email;
+        this.passwordHash = passwordHash;
+    }
+
 }

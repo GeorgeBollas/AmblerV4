@@ -7,6 +7,6 @@ import au.com.gravitywave.entities.Person;
  */
 
 public interface LoginInteractor {
-    Person LoginWithCredentials(String userName, String userPassword);
+    Person LoginWithCredentials(String email, String userPassword);
     Person LoginWithFingerPrint(String token);
 }

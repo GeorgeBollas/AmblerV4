@@ -15,13 +15,13 @@ public class PersonRepositoryImpl extends RepositoryBase implements PersonReposi
     private final List<Person> people;
     public PersonRepositoryImpl() {
         people = new ArrayList<Person>() {{
-            add(new Person(1,"John", "Smith","1 Smith street"));
-            add(new Person(2,"Jane", "Jones","1 Jones street"));
-            add(new Person(3,"Imma", "Candle","1 Candle street"));
-            add(new Person(4,"Sarah", "Connor","1 Connor street"));
-            add(new Person(5,"Mary", "Sward","1 Sward street"));
-            add(new Person(6,"Sue", "Talent","1 Talent street"));
-            add(new Person(7,"Sandra", "Dee","1 Dee street"));
+            add(new Person(1,"John", "Smith","1 Smith street","john.smith@gmail.com","password"));
+            add(new Person(2,"Jane", "Jones","1 Jones street","jane.jones@gmail.com","password"));
+            add(new Person(3,"Imma", "Candle","1 Candle street","imma.candle@gmail.com","password"));
+            add(new Person(4,"Sarah", "Connor","1 Connor street","sarah.connor@gmail.com","password"));
+            add(new Person(5,"Mary", "Sward","1 Sward street","mary.sward@gmail.com","password"));
+            add(new Person(6,"Sue", "Talent","1 Talent street","sue.talent@gmail.com","password"));
+            add(new Person(7,"Sandra", "Dee","1 Dee street","sandra.dee@gmail.com","password"));
         }};
 
 
@@ -33,6 +33,16 @@ public class PersonRepositoryImpl extends RepositoryBase implements PersonReposi
         for (Person p:people
              ) {
             if (p.getPersonId() == personId)
+                return p;
+        }
+        return null;
+    }
+
+    @Override
+    public Person GetByEmail(String email) {
+        for (Person p:people
+                ) {
+            if (p.getEmail() == email)
                 return p;
         }
         return null;

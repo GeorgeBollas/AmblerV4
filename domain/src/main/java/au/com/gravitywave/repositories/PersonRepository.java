@@ -9,5 +9,5 @@ import au.com.gravitywave.entities.Person;
 public interface PersonRepository {
 
     Person GetById(int personId);
-
+    Person GetByEmail(String email);
 }
